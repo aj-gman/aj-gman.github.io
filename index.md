@@ -31,7 +31,9 @@ I manage my own wiki, where I endeavor to crystalize my tabletop roleplaying gam
 
 You can find it [here](https://aj-gman.github.io/wiki/).
 
-## Wikis I Haunt
+## My Notes
+
+I keep a small [stacking notes](notes.html) collection. See also [More about me](#) and [Blog #1](#).
 
 - WikiProject_Romania
 - Industrialist, a game on Roblox
