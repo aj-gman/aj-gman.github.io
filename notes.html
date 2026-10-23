@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+#stack { display:flex; gap:1rem; overflow-x:auto; }
+.panel { min-width:320px; max-width:480px; border:1px solid #e0e0e0; padding:1rem; background:#fff; }
+.panel h1 { font-size:1.4rem; }
+a.note-link { color:#2563eb; }
+</style>
+</head>
+<body>
+<header><h1>Notes</h1><a href="index.html">About these notes</a></header>
+<main id="stack"></main>
+<script>
+fetch('notes.json').then(r=>r.json()).then(notes=>{
+  const map=new Map(notes.map(n=>[n.id,n]));
+  const params=new URLSearchParams(location.search);
+  let stack=(params.get('stackedNotes')||'').split(',').filter(Boolean);
+  if(!stack.length) stack=[notes[0].id];
+  function render(){
+    const s=document.getElementById('stack'); s.innerHTML='';
+    stack.forEach(id=>{
+      const n=map.get(id); if(!n) return;
+      const p=document.createElement('div'); p.className='panel';
+      p.innerHTML='<h1>'+n.title+'</h1><div>'+n.body.replace(/\\[\\[(.+?)\\]\\]/g,(m,t)=>'<a class="note-link" data-id="'+t+'" href="#">'+t+'</a>')+'</div>';
+      s.appendChild(p);
+    });
+    document.querySelectorAll('.note-link').forEach(a=>a.onclick=e=>{e.preventDefault();const id=a.dataset.id; if(!stack.includes(id)) stack.push(id); if(stack.length>4) stack.shift(); const u=new URL(location); u.searchParams.set('stackedNotes',stack.join(',')); history.replaceState(null,'',u); render();});
+  }
+  render();
+});
+</script>
+</body>
+</html>
