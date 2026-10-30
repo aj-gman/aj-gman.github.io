@@ -1,5 +1,0 @@
-[
-  {"id":"zCMhncA1iSE74MKKYQS5PBZ","title":"About these notes","body":"# About these notes\n\nThis is a small collection of evergreen notes. Each note has a stable ID in its URL.\n\nLinks to other notes: [[More about me]] and [[Blog #1]].\n\n---\n\n> Notes are markdown with a title, body, inline links.\n\n## References\n- aj-gman.github.io"},
-  {"id":"more-about-me","title":"More about me","body":"# More about me\n\nI am deeply interested in game design. See [[About these notes]] and [[Blog #1]]."},
-  {"id":"blog-1","title":"Blog #1","body":"# Blog #1\n\nFirst blog post. Links to [[About these notes]] and [[More about me]]."}
-]
