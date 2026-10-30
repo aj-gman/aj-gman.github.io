@@ -130,17 +130,13 @@ footer {
   border-color: #ff0000;
 }
 
-.vampire-btn:hover {
-  animation: bleed 0.8s infinite;
-}
-
+/* Vampire: Vertical line drips */
 .vampire-btn:hover {
   animation: bleed 1.2s infinite;
 }
-
 @keyframes bleed {
-  0%, 100% { box-shadow: 0 0 5px #8b0000; }
-  50% { box-shadow: 0 12px 0 3px #8b0000, 0 25px 0 1px #5c0000; }
+  0%, 100% { box-shadow: 0 0 5px #5c0000; }
+  50% { box-shadow: 4px 15px 0 0 #5c0000, -6px 22px 0 0 #8b0000, 2px 30px 0 0 #3a0000; }
 }
 
 .cyberpunk-btn {
@@ -150,12 +146,17 @@ footer {
   text-transform: uppercase;
 }
 
-.cyberpunk-btn:hover {
-  animation: glitch 2s infinite;
+/* Cyberpunk: Vertical slices breaking apart */
+.cyberpunk-btn {
+  position: relative;
+  overflow: hidden;
 }
-
-@keyframes glitch {
-  0%, 85%, 100% { transform: translate(0); clip-path: none; }
-  88% { transform: skewX(-15deg); clip-path: inset(10% 0 60% 0); }
-  92% { transform: skewX(15deg); clip-path: inset(50% 0 20% 0); }
+.cyberpunk-btn:hover {
+  animation: slice-glitch 2s infinite steps(1);
+}
+@keyframes slice-glitch {
+  0%, 90%, 100% { transform: translate(0); clip-path: inset(0 0 0 0); }
+  92% { clip-path: inset(0 60% 0 0); transform: translateX(-5px); }
+  95% { clip-path: inset(0 0 0 40%); transform: translateX(5px); }
+  98% { clip-path: inset(0 30% 0 30%); transform: translateY(-3px); }
 }
