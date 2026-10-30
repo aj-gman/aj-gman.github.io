@@ -40,5 +40,3 @@ fs.writeFileSync(path.join(DIST, 'index.json'), JSON.stringify({ notes, backlink
 fs.copyFileSync(path.join(ROOT, 'styles.css'), path.join(DIST, 'styles.css'));
 fs.writeFileSync(path.join(DIST, 'index.html'), '<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Notes</title><link rel="stylesheet" href="/styles.css"></head><body><main id="stack"></main><script src="/app.js"></script></body></html>');
 console.log('Built', notes.length, 'notes');
-
-fs.copyFileSync(path.join(ROOT,'src','app.ts'),path.join(DIST,'app.js'));
