@@ -104,3 +104,64 @@ footer {
         font-size: 1.3rem;
     }
 }
+/* Button Container & Themed Buttons */
+.button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.vampire-btn {
+  color: #ff0000;
+  border-color: #ff0000;
+}
+
+.vampire-btn:hover {
+  animation: bleed 0.8s infinite;
+}
+
+.vampire-btn:active {
+  background: #ff0000;
+  color: #000;
+}
+
+@keyframes bleed {
+  0% { box-shadow: 0 0 5px #ff0000; }
+  50% { box-shadow: 0 15px 20px rgba(255, 0, 0, 0.8), 0 5px 5px rgba(255, 0, 0, 0.5); }
+  100% { box-shadow: 0 0 5px #ff0000; }
+}
+
+.cyberpunk-btn {
+  color: #00f0ff;
+  border-color: #00f0ff;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.cyberpunk-btn:hover {
+  animation: glitch 0.3s infinite;
+  background: rgba(0, 240, 255, 0.2);
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); text-shadow: none; }
+  20% { transform: translate(-2px, 2px); text-shadow: 2px -2px #ff0055; }
+  40% { transform: translate(-2px, -2px); text-shadow: -2px 2px #00f0ff; }
+  60% { transform: translate(2px, 2px); text-shadow: 2px 2px #ff0055; }
+  80% { transform: translate(2px, -2px); text-shadow: -2px -2px #00f0ff; }
+  100% { transform: translate(0); text-shadow: none; }
+}
