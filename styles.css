@@ -134,15 +134,13 @@ footer {
   animation: bleed 0.8s infinite;
 }
 
-.vampire-btn:active {
-  background: #ff0000;
-  color: #000;
+.vampire-btn:hover {
+  animation: bleed 1.2s infinite;
 }
 
 @keyframes bleed {
-  0% { box-shadow: 0 0 5px #ff0000; }
-  50% { box-shadow: 0 15px 20px rgba(255, 0, 0, 0.8), 0 5px 5px rgba(255, 0, 0, 0.5); }
-  100% { box-shadow: 0 0 5px #ff0000; }
+  0%, 100% { box-shadow: 0 0 5px #8b0000; }
+  50% { box-shadow: 0 12px 0 3px #8b0000, 0 25px 0 1px #5c0000; }
 }
 
 .cyberpunk-btn {
@@ -153,15 +151,11 @@ footer {
 }
 
 .cyberpunk-btn:hover {
-  animation: glitch 0.3s infinite;
-  background: rgba(0, 240, 255, 0.2);
+  animation: glitch 2s infinite;
 }
 
 @keyframes glitch {
-  0% { transform: translate(0); text-shadow: none; }
-  20% { transform: translate(-2px, 2px); text-shadow: 2px -2px #ff0055; }
-  40% { transform: translate(-2px, -2px); text-shadow: -2px 2px #00f0ff; }
-  60% { transform: translate(2px, 2px); text-shadow: 2px 2px #ff0055; }
-  80% { transform: translate(2px, -2px); text-shadow: -2px -2px #00f0ff; }
-  100% { transform: translate(0); text-shadow: none; }
+  0%, 85%, 100% { transform: translate(0); clip-path: none; }
+  88% { transform: skewX(-15deg); clip-path: inset(10% 0 60% 0); }
+  92% { transform: skewX(15deg); clip-path: inset(50% 0 20% 0); }
 }
