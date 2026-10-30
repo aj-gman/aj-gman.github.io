@@ -132,33 +132,12 @@ footer {
   overflow: hidden;
 }
 
-/* Vampire: Vertical line drips */
-.vampire-btn:hover {
-  animation: bleed 1.2s infinite;
-}
-@keyframes bleed {
-  0%, 100% { box-shadow: 0 0 5px #5c0000; }
-  50% { box-shadow: 4px 15px 0 0 #5c0000, -6px 22px 0 0 #8b0000, 2px 30px 0 0 #3a0000; }
-}
-
 .cyberpunk-btn {
   color: #00f0ff;
   border-color: #00f0ff;
   font-family: monospace;
   text-transform: uppercase;
 }
-
-/* Cyberpunk: Vertical slices breaking apart */
-.cyberpunk-btn {
-  position: relative;
-  overflow: hidden;
-}
-.cyberpunk-btn:hover {
-  animation: slice-glitch 2s infinite steps(1);
-}
-@keyframes slice-glitch {
-  0%, 90%, 100% { transform: translate(0); clip-path: inset(0 0 0 0); }
-  92% { clip-path: inset(0 60% 0 0); transform: translateX(-5px); }
 
 /* Cyberpunk 2077 glitch button */
 .cyberpunk-btn {
