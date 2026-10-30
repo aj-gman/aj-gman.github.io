@@ -1,0 +1,33 @@
+{
+  "notes": [
+    {
+      "id": "blog-1",
+      "title": "Blog",
+      "html": "<h1>Blog #1</h1>\n<p>First blog post. Links to <a href=\"/n/zCMhncA1iSE74MKKYQS5PBZ/\">About these notes</a> and <a href=\"/n/more-about-me/\">More about me</a>.</p>\n"
+    },
+    {
+      "id": "more-about-me",
+      "title": "More about me",
+      "html": "<h1>More about me</h1>\n<p>I am deeply interested in game design. See <a href=\"/n/zCMhncA1iSE74MKKYQS5PBZ/\">About these notes</a> and <a href=\"/n/blog-1/\">Blog #1</a>.</p>\n"
+    },
+    {
+      "id": "zCMhncA1iSE74MKKYQS5PBZ",
+      "title": "About these notes",
+      "html": "<h1>About these notes</h1>\n<p>A small collection of evergreen notes. Each note has a stable ID in its URL.</p>\n<p>Links: <a href=\"/n/more-about-me/\">More about me</a> and <a href=\"/n/blog-1/\">Blog #1</a>.</p>\n<hr>\n<blockquote>\n<p>Notes are markdown with a title, body, inline links.</p>\n</blockquote>\n<h2>References</h2>\n<ul>\n<li>aj-gman.github.io</li>\n</ul>\n"
+    }
+  ],
+  "backlinks": {
+    "blog-1": [
+      "more-about-me",
+      "zCMhncA1iSE74MKKYQS5PBZ"
+    ],
+    "more-about-me": [
+      "blog-1",
+      "zCMhncA1iSE74MKKYQS5PBZ"
+    ],
+    "zCMhncA1iSE74MKKYQS5PBZ": [
+      "blog-1",
+      "more-about-me"
+    ]
+  }
+}
